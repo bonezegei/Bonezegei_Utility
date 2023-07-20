@@ -7,6 +7,8 @@
 #ifndef _RECT_H_
 #define _RECT_H_
 
+#include "Point.h"
+
 
 //Simple Rectangle Class For UI
 class Rect {
@@ -23,6 +25,8 @@ public:
     y1 = ya;
     x2 = xb;
     y2 = yb;
+	p1 = Point(xa,ya);
+	p2 = Point(xb,yb);
   }
 
   char isPointInside(int x, int y) {
@@ -41,7 +45,18 @@ public:
     }
   }
 
+  Rect operator+(const Point& pos) const{
+		Rect ret(*this);
+		ret.x1+=pos.x;
+		ret.y1+=pos.y;
+		ret.x2+=pos.x;
+		ret.y2+=pos.y;
+		return ret;
+  }
+	
   int x1, y1, x2, y2;
+  Point p1;
+  Point p2;
 };
 
 
