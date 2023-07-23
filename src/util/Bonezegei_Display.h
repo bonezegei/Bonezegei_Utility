@@ -92,6 +92,21 @@ public:
 			drawTextClipped(r.x1, r.y1, r.x2, r.y2, r.x1+1, r.y1+1, str, color);
 		}
 	}
+
+	// Draws a clipped text int the center of the box one line text only
+	void drawText(Rect c, Rect r, bool center,const char *str,uint32_t color){
+		if(center){
+			int fontHeight = getFontHeight();
+			int textWidth = getStringWidth((char*)str);
+			int textX = r.x1 + (((r.x2 - r.x1) / 2) - (textWidth / 2));
+			int textY = r.y1 + (((r.y2 - r.y1) / 2) - (fontHeight / 2)) + 1;
+			//drawText(textX, textY, str, color);
+			drawTextClipped(c.x1, c.y1, c.x2, c.y2, textX, textY, str, color);
+		}
+		else{
+			drawTextClipped(r.x1, r.y1, r.x2, r.y2, r.x1+1, r.y1+1, str, color);
+		}
+	}
 	
 	
 ///Draw Rectangle
