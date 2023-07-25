@@ -10,7 +10,7 @@
 //Simple Point Class For UI
 class Bitmap {
 public:
-
+  Bitmap() {}
   Bitmap(int numXBytes, int height, char* bitmap) {
 	xbytes = numXBytes;
 	yheight = height;
