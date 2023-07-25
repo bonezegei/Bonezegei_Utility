@@ -67,7 +67,27 @@ const char bonezegeismallBitmaps[424] =
 const uint8_t bonezegeismallWidthPages = 8;
 const uint8_t bonezegeismallHeightPixels = 53;
 
+// 
+//  Image data for close
+// 
 
+const char closeBitmaps[20] =
+{
+	0xC0, 0xC0, // ##      ##
+	0xE1, 0xC0, // ###    ###
+	0x73, 0x80, //  ###  ### 
+	0x3F, 0x00, //   ######  
+	0x1E, 0x00, //    ####   
+	0x1E, 0x00, //    ####   
+	0x3F, 0x00, //   ######  
+	0x73, 0x80, //  ###  ### 
+	0xE1, 0xC0, // ###    ###
+	0xC0, 0xC0, // ##      ##
+};
+
+// Bitmap sizes for close
+const uint8_t closeWidthPages = 2;
+const uint8_t closeHeightPixels = 10;
 
 
 #endif
