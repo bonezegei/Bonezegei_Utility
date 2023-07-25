@@ -19,7 +19,7 @@
 #include "Font.h"
 
 const Bitmap BitmapBonezegei = Bitmap(bonezegeismallWidthPages, bonezegeismallHeightPixels, (char*)bonezegeismallBitmaps);
-
+const Bitmap BitmapClose     = Bitmap(closeWidthPages, closeHeightPixels, (char*)closeBitmaps);
 
 class Bonezegei_Utility {
 public:
