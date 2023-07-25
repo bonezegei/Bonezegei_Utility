@@ -14,6 +14,7 @@ public:
   Bitmap(int numXBytes, int height, char* bitmap) {
 	xbytes = numXBytes;
 	yheight = height;
+	data=(char*)malloc(xbytes*yheight);
 	data= bitmap;
   }
 
