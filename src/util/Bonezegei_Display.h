@@ -79,6 +79,16 @@ public:
 			drawTextClipped(r.x1, r.y1, r.x2, r.y2, r.x1+1, r.y1+1, str, color);}
 	}
 	
+	// Draws a text int the box
+	void drawText(bool NL_Word,Rect c,Rect r,const char *str,uint32_t color){
+		if(NL_Word){
+			drawTextClippedNL(c.x1, c.y1, c.x2, c.y2, r.x1+1, r.y1+1, str, color);}
+		else{
+			drawTextClipped(c.x1, c.y1, c.x2, c.y2, r.x1+1, r.y1+1, str, color);}
+	}
+	
+	
+	
 	// Draws a text int the center of the box one line text only
 	void drawText(Rect r, bool center,const char *str,uint32_t color){
 		if(center){
