@@ -24,7 +24,7 @@ typedef enum {
   FONT_ARIAL_8_BOLD,
   FONT_ARIAL_10_BOLD,
   FONT_ARIAL_12_BOLD,
-} FONT_TYPE;_TYPE;
+} FONT_TYPE;
 
 
 class FONT {
