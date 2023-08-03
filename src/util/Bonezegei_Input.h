@@ -44,6 +44,8 @@ public:
   Point getPoint(){
     if(getInput()){
         calculate();
+		if(_x<=0)_x=0;
+		if(_y<=0)_y=0;
         point.x=_x;
         point.y=_y;
     return point;
@@ -54,6 +56,8 @@ public:
   int8_t getPress(){
     if(getInput()){
         calculate();
+  		  if(_x<=0)_x=0;
+		    if(_y<=0)_y=0;
         point.x=_x;
         point.y=_y;
         return 1;
@@ -79,12 +83,12 @@ public:
   }
 
 
-  uint16_t x;
-  uint16_t y;
-  uint16_t z;
+  int x;
+  int y;
+  int z;
 
-  uint16_t _x;
-  uint16_t _y;
+  int _x;
+  int _y;
 
   Point point;
   
