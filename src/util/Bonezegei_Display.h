@@ -42,7 +42,9 @@ protected:
 	virtual void drawRectangleClipped(uint16_t cx1, uint16_t cy1, uint16_t cx2, uint16_t cy2, uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint32_t color){}
 	
 	virtual uint8_t getFontHeight();
-    virtual uint16_t getStringWidth(char *str);
+        virtual uint16_t getStringWidth(char *str);
+
+	virtual uint16_t getStringTotalHeight(uint16_t cx1, uint16_t cy1, uint16_t cx2, uint16_t cy2, int x, int y, const char *str);
 
 public:
 	
@@ -159,7 +161,13 @@ public:
 		drawBitmapClipped(r.x1, r.y1, r.x2, r.y2, p.x, p.y,  b.xbytes, b.yheight, (const char*)b.data, color);
 	}
 	
-	
+
+
+
+	int getStringHeight(Rect r,const char *str){
+		return getStringTotalHeight(r.x1, r.y1, r.x2, r.y2, r.x1+1, r.y1+1, str);
+	}
+
 	int xRun;
 	int yRun;
 	FONT font;
